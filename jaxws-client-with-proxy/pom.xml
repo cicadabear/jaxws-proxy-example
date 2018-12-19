@@ -12,6 +12,21 @@
 			<version>2.2.10</version>
 			<type>pom</type>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>3.2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>3.2.7</version>
+		</dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-simple</artifactId>
+            <version>3.2.7</version>
+        </dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -29,6 +44,12 @@
 				<configuration>
 					<!-- The name of your generated source package -->
 					<packageName>ch.schu.example.hello</packageName>
+					<wsdlDirectory>${project.basedir}/src/wsdl</wsdlDirectory>
+					<wsdlFiles>
+						<wsdlFile>ticket.xml</wsdlFile>
+					</wsdlFiles>
+					<verbose>true</verbose>
+					<sourceDestDir>${wsdl.generated.source.files.dir}</sourceDestDir>
 					<vmArgs>
 						<vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
 						<vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>

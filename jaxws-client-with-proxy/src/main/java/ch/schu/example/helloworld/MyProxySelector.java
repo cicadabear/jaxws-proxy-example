@@ -11,7 +11,7 @@ public class MyProxySelector extends ProxySelector {
     public List<Proxy> select(URI uri) 
     {
         System.out.println("select for " + uri.toString());
-        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("localhost", 9999));
+        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("127.0.0.1", 8888));
         ArrayList<Proxy> list = new ArrayList<Proxy>();
         list.add(proxy);
         return list;   

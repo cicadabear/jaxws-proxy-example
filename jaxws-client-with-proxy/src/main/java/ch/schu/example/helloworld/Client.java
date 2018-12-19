@@ -1,19 +1,26 @@
 package ch.schu.example.helloworld;
 
-import java.net.ProxySelector;
+import ch.schu.example.hello.IHbslDTicketWebService;
+import ch.schu.example.hello.IHbslDTicketWebServiceService;
 
-import ch.schu.example.hello.HelloImpl;
-import ch.schu.example.hello.HelloImplService;
+import java.net.ProxySelector;
 
 public class Client {
 
     public static void main(String[] args) {
         
         ProxySelector.setDefault(new MyProxySelector());
-        
-        HelloImplService service = new HelloImplService();
-        HelloImpl hello = service.getHelloImplPort();
-        System.out.println(hello.sayHello("Howard Wollowitz"));
+
+        IHbslDTicketWebServiceService serviceService = new IHbslDTicketWebServiceService();
+        IHbslDTicketWebService service = serviceService.getIHbslDTicketWebServicePort();
+        String dataXml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" +
+                "<request>" +
+                "<ip>10.21.89.29</ip>" +
+                "<hyid>181008112457089772</hyid>" +
+                "<ddbh>181109000016</ddbh>" +
+                "</request>";
+        String response = service.cancelOrder(dataXml,"");
+        System.out.println(response);
     }
     
 }
