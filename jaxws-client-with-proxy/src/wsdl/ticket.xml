@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.ws.adapter.vetech.cn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="IHbslDTicketWebServiceService" targetNamespace="http://webservice.ws.adapter.vetech.cn/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.ws.adapter.vetech.cn/" elementFormDefault="unqualified" targetNamespace="http://webservice.ws.adapter.vetech.cn/" version="1.0">
+
+  <xs:element name="cancelChangeOrder" type="tns:cancelChangeOrder"/>
+
+  <xs:element name="cancelChangeOrderResponse" type="tns:cancelChangeOrderResponse"/>
+
+  <xs:element name="cancelOrder" type="tns:cancelOrder"/>
+
+  <xs:element name="cancelOrderResponse" type="tns:cancelOrderResponse"/>
+
+  <xs:element name="cancelRefundOrder" type="tns:cancelRefundOrder"/>
+
+  <xs:element name="cancelRefundOrderResponse" type="tns:cancelRefundOrderResponse"/>
+
+  <xs:element name="changeApply" type="tns:changeApply"/>
+
+  <xs:element name="changeApplyResponse" type="tns:changeApplyResponse"/>
+
+  <xs:element name="changorderQuery" type="tns:changorderQuery"/>
+
+  <xs:element name="changorderQueryResponse" type="tns:changorderQueryResponse"/>
+
+  <xs:element name="insertOrder" type="tns:insertOrder"/>
+
+  <xs:element name="insertOrderResponse" type="tns:insertOrderResponse"/>
+
+  <xs:element name="orderQuery" type="tns:orderQuery"/>
+
+  <xs:element name="orderQueryResponse" type="tns:orderQueryResponse"/>
+
+  <xs:element name="pata" type="tns:pata"/>
+
+  <xs:element name="pataResponse" type="tns:pataResponse"/>
+
+  <xs:element name="refundApply" type="tns:refundApply"/>
+
+  <xs:element name="refundApplyResponse" type="tns:refundApplyResponse"/>
+
+  <xs:element name="refundQuery" type="tns:refundQuery"/>
+
+  <xs:element name="refundQueryResponse" type="tns:refundQueryResponse"/>
+
+  <xs:complexType name="changeApply">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqXml" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="changeApplyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelRefundOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqzXml" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelRefundOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqXml" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="orderQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqXml" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="orderQueryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="refundQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqXml" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="refundQueryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="refundApply">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqXml" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="refundApplyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="changorderQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqXml" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="changorderQueryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pata">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqXml" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqzXml" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelChangeOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqzXml" type="xs:string"/>
+      <xs:element minOccurs="0" name="sign" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelChangeOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="cancelChangeOrderResponse">
+    <wsdl:part element="tns:cancelChangeOrderResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertOrderResponse">
+    <wsdl:part element="tns:insertOrderResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refundQueryResponse">
+    <wsdl:part element="tns:refundQueryResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelOrderResponse">
+    <wsdl:part element="tns:cancelOrderResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pataResponse">
+    <wsdl:part element="tns:pataResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelRefundOrder">
+    <wsdl:part element="tns:cancelRefundOrder" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="orderQuery">
+    <wsdl:part element="tns:orderQuery" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="changeApply">
+    <wsdl:part element="tns:changeApply" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="orderQueryResponse">
+    <wsdl:part element="tns:orderQueryResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refundApplyResponse">
+    <wsdl:part element="tns:refundApplyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="changeApplyResponse">
+    <wsdl:part element="tns:changeApplyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelRefundOrderResponse">
+    <wsdl:part element="tns:cancelRefundOrderResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refundQuery">
+    <wsdl:part element="tns:refundQuery" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pata">
+    <wsdl:part element="tns:pata" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="changorderQuery">
+    <wsdl:part element="tns:changorderQuery" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertOrder">
+    <wsdl:part element="tns:insertOrder" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="changorderQueryResponse">
+    <wsdl:part element="tns:changorderQueryResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelOrder">
+    <wsdl:part element="tns:cancelOrder" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelChangeOrder">
+    <wsdl:part element="tns:cancelChangeOrder" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refundApply">
+    <wsdl:part element="tns:refundApply" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IHbslDTicketWebService">
+    <wsdl:operation name="changeApply">
+      <wsdl:input message="tns:changeApply" name="changeApply">
+    </wsdl:input>
+      <wsdl:output message="tns:changeApplyResponse" name="changeApplyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelRefundOrder">
+      <wsdl:input message="tns:cancelRefundOrder" name="cancelRefundOrder">
+    </wsdl:input>
+      <wsdl:output message="tns:cancelRefundOrderResponse" name="cancelRefundOrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertOrder">
+      <wsdl:input message="tns:insertOrder" name="insertOrder">
+    </wsdl:input>
+      <wsdl:output message="tns:insertOrderResponse" name="insertOrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="orderQuery">
+      <wsdl:input message="tns:orderQuery" name="orderQuery">
+    </wsdl:input>
+      <wsdl:output message="tns:orderQueryResponse" name="orderQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="refundQuery">
+      <wsdl:input message="tns:refundQuery" name="refundQuery">
+    </wsdl:input>
+      <wsdl:output message="tns:refundQueryResponse" name="refundQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="refundApply">
+      <wsdl:input message="tns:refundApply" name="refundApply">
+    </wsdl:input>
+      <wsdl:output message="tns:refundApplyResponse" name="refundApplyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changorderQuery">
+      <wsdl:input message="tns:changorderQuery" name="changorderQuery">
+    </wsdl:input>
+      <wsdl:output message="tns:changorderQueryResponse" name="changorderQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pata">
+      <wsdl:input message="tns:pata" name="pata">
+    </wsdl:input>
+      <wsdl:output message="tns:pataResponse" name="pataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelOrder">
+      <wsdl:input message="tns:cancelOrder" name="cancelOrder">
+    </wsdl:input>
+      <wsdl:output message="tns:cancelOrderResponse" name="cancelOrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelChangeOrder">
+      <wsdl:input message="tns:cancelChangeOrder" name="cancelChangeOrder">
+    </wsdl:input>
+      <wsdl:output message="tns:cancelChangeOrderResponse" name="cancelChangeOrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IHbslDTicketWebServiceServiceSoapBinding" type="tns:IHbslDTicketWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="cancelRefundOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelRefundOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelRefundOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeApply">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="changeApply">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="changeApplyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="insertOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="insertOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="orderQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="orderQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="orderQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="refundQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="refundQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="refundQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="refundApply">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="refundApply">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="refundApplyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changorderQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="changorderQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="changorderQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pata">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="pata">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelChangeOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelChangeOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelChangeOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IHbslDTicketWebServiceService">
+    <wsdl:port binding="tns:IHbslDTicketWebServiceServiceSoapBinding" name="IHbslDTicketWebServicePort">
+      <soap:address location="http://localhost:18080/ws/services/ticket"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
